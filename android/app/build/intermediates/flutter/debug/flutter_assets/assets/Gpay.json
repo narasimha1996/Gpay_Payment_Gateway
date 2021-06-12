@@ -1,0 +1,35 @@
+{
+    "provider": "google_pay",
+    "data": {
+      "environment":"PRODUCTION",
+      "apiVersion": 2,
+      "apiVersionMinor": 0,
+      "allowedPaymentMethods": [{
+        "type": "CARD",
+        "tokenizationSpecification": {
+          "type": "PAYMENT_GATEWAY",
+          "parameters": {
+            "gateway": "allpayments",
+            "gatewayMerchantId": "BCR2DN6TR7WZNI2N"
+          }
+        },
+        "parameters": {
+          "allowedCardNetworks": ["VISA", "MASTERCARD"],
+          "allowedAuthMethods": ["PAN_ONLY", "CRYPTOGRAM_3DS"],
+          "billingAddressRequired": true,
+          "billingAddressParameters": {
+            "format": "FULL",
+            "phoneNumberRequired": true
+          }
+        }
+      }],
+      "merchantInfo": {
+        "merchantId": "BCR2DN6TR7WZNI2N",
+        "merchantName": "Murali palacholla"
+      },
+      "transactionInfo": {
+        "countryCode": "US",
+        "currencyCode": "USD"
+      }
+    }
+  }
